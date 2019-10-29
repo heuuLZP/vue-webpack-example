@@ -89,3 +89,22 @@
   }
   ```
 
+  ### 1.5 设置 `HtmlWebpackPlugin`，自动生成 `index.html`
+
+  ```
+  yarn add html-webpack-plugin -D
+  ```
+
+  ### 1.6 清理 `/dist` 文件夹
+  
+  ```
+  yarn add clean-webpack-plugin -D
+  ```
+
+  ### 1.7 使用 webpack-dev-server
+
+  ```
+  yarn add webpack-dev-server -D
+  ```
+
+

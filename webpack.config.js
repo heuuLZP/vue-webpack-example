@@ -1,5 +1,7 @@
 const path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -7,6 +9,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')
+  },
+  devServer: {
+    contentBase: './dist'
   },
   module: {
     rules: [{
@@ -20,6 +25,10 @@ module.exports = {
     }]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html' // 以 index.html 为模板
+    })
   ]
 }
