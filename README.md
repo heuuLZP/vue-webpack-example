@@ -147,3 +147,13 @@
   yarn add postcss-loader autoprefixer -D
   ```
 
+  ### 1.11 配置 babel 7.x
+
+  [babel 使用指南](https://babel.docschina.org/docs/en/usage)   
+  [【前端词典】关于 Babel 你必须知道的](https://juejin.im/post/5d2b1df66fb9a07ef161b208#heading-17)
+
+  ```
+  yarn add babel-loader @babel/core @babel/preset-env -D
+  ```
+
+

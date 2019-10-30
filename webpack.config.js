@@ -12,7 +12,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      assets: path.join(__dirname, 'src/assets/')
+      assets: path.join(__dirname, 'src/assets/'),
+      utils: path.join(__dirname, 'src/utils/')
     }
   },
   devServer: {
@@ -63,6 +64,16 @@ module.exports = {
         }
       }]
     },
+    {
+      test: /\.m?js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      }
+    }
   ]
   },
   plugins: [
