@@ -1,0 +1,46 @@
+@mixin fc($size, $color, $weight: 400) {
+	font: {
+		size: $size;
+		weight: $weight;
+	}
+	color: $color;
+}
+
+@mixin border($color, $width: 2rpx, $style: solid ) {
+  border: $width $style $color;
+}
+
+@mixin pb($length) {
+  padding-bottom: $length;
+}
+
+@mixin mb($length) {
+  margin-bottom: $length;
+}
+
+/* flex 垂直水平居中 */
+@mixin flex-center($direction: row) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: $direction;
+}
+
+/* absolute/fixed 垂直水平居中 */
+@mixin position-center() {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin full-screen() {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@mixin wh($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
