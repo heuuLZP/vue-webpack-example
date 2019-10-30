@@ -120,6 +120,30 @@
   ### 1.9 css 预处理器
 
   `sass/scss` 预处理器
+
+  `node-sass` 安装需要使用 `vpn`。
+
+  `sass-resources-loader` 的作用: 全局注入，公共的 `variables.scss` 和 `mixin.scss` 不用在每个 vue 文件中再次引入。
+
+
   ```
   yarn add node-sass sass-loader -D
+  yarn add sass-resources-loader -D
   ```
+
+  静态资源目录：
+  ```
+  assets                                                       
+  |-- img                                                        
+  `-- scss                                                  
+      |-- _mixin.scss       
+      |-- _variables.scss   
+      |-- common.scss                                                       
+  ```
+
+  ### 1.10 添加 `postcss-loader` + `autoprefixer`，自动添加 `css` 浏览器前缀
+
+  ```
+  yarn add postcss-loader autoprefixer -D
+  ```
+

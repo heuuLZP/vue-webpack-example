@@ -16,12 +16,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .greeting {
-  color: #009966;
+  color: $green;
   font-size: 32px;
   font-weight: bold;
 }
