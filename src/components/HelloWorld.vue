@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="content">
     <p class="greeting">{{ msg }}</p>
+    <img :src="require('assets/img/jump.jpg')" class="person-img" alt="jump">
   </div>
 </template>
 
@@ -16,10 +17,17 @@ export default {
 </script>
 
 <style scoped>
-.greeting {
+.content {
   text-align: center;
+}
+.greeting {
   color: #009966;
   font-size: 32px;
   font-weight: bold;
+}
+.person-img {
+  width: 320px;
+  height: 400px;
+  border: 1px solid #000;
 }
 </style>

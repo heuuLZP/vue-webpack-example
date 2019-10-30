@@ -107,4 +107,19 @@
   yarn add webpack-dev-server -D
   ```
 
+  ### 1.8 加载图片
 
+  `file-loader` 的作用：将 `Javascript` 和 `Css` 中引入图片的语句 `import/require()` 替换成 url, 并且将图片输出到文件夹。
+
+  `url-loader` 的作用：在 `file-loader` 的基础上，如果文件小于限制(图片体积不宜过大), 可将文件内容经过 `base64` 编码后注入 `js` 或者 `css` 。
+
+  ```
+  yarn add file-loader url-loader -D
+  ```
+
+  ### 1.9 css 预处理器
+
+  `sass/scss` 预处理器
+  ```
+  yarn add node-sass sass-loader -D
+  ```

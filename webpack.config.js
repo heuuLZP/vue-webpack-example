@@ -10,6 +10,11 @@ module.exports = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')
   },
+  resolve: {
+    alias: {
+      assets: path.join(__dirname, 'src/assets/')
+    }
+  },
   devServer: {
     contentBase: './dist'
   },
@@ -22,7 +27,17 @@ module.exports = {
     {
       test: /\.css$/,
       use: ['style-loader', 'css-loader']
-    }]
+    },
+    {
+      test: /\.(png|jpg|jpeg|svg|gif)$/,
+      use: [ {
+        loader: 'url-loader',
+        options: {
+          limit: 8192
+        }
+      }]
+    },
+  ]
   },
   plugins: [
     new VueLoaderPlugin(),
